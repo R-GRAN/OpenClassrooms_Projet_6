@@ -6,6 +6,7 @@ import Propos from "./pages/Propos/index.jsx";
 import Error from "./pages/Error/index.jsx";
 import "./assets/styles/main.scss";
 import HeaderApp from "./components/common/HeaderApp.jsx";
+import FooterApp from "./components/common/FooterApp.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -16,6 +17,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/propos" element={<Propos />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      <FooterApp />
     </Router>
   </React.StrictMode>
 );
