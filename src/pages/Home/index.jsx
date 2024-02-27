@@ -1,4 +1,4 @@
-
+import Gallery from "@/components/others/Gallery.jsx"
 import Banner from "@/components/others/Banner.jsx"
 
 function Home() {
