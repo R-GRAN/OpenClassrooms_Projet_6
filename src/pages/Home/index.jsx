@@ -1,5 +1,5 @@
+
 import Banner from "@/components/others/Banner.jsx"
-import Gallery from "@/components/others/Gallery";
 
 function Home() {
   return ( <div>
@@ -7,5 +7,4 @@ function Home() {
     <Gallery/>
     </div>);
 }
-
 export default Home;
