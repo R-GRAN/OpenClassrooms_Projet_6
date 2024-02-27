@@ -1,0 +1,15 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 223px;
+  background-image: url("@/assets/images/cote.png");
+  background-size: cover;
+  background-attachment: fixed;
+  color: $secondary;
+  margin: 45px;
+  border: {
+    radius: 25px;
+  }
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
