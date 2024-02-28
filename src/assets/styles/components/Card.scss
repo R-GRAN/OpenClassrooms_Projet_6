@@ -1,11 +1,11 @@
 .card {
   width: 340px;
   height: 340px;
+  margin: 10px auto;
+  background-color: $primary;
+  color: $secondary;
   border: {
     radius: 10px;
   }
   border: 1px solid black;
-  h2 {
-    background-color: aqua;
-  }
 }

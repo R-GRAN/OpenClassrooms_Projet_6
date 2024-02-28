@@ -7,13 +7,14 @@ import Error from "./pages/Error/index.jsx";
 import "./assets/styles/main.scss";
 import HeaderApp from "./components/common/HeaderApp.jsx";
 import FooterApp from "./components/common/FooterApp.jsx";
+import accommodations from "./assets/data/data.json"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Router>
       <HeaderApp />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home accommodations={accommodations}/>} />
         <Route path="/propos" element={<Propos />} />
         <Route path="*" element={<Error />} />
       </Routes>
