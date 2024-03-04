@@ -1,11 +1,13 @@
-import datas from "@/assets/data/data.json";
 import Card from "./Card";
+import accommodations from "@/assets/data/accommodations.json";
 
 function Gallery() {
+
+
   return (
     <section className="gallery">
-      {datas.map((data) => (
-        <Card key={`${data.id}-${data.title}`} title={data.title} />
+      {accommodations.map((accommodation) => (
+        <Card key={`${accommodation.id}-${accommodation.title}`} accommodation={accommodation} />
       ))}
     </section>
   );

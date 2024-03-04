@@ -1,13 +1,13 @@
 function Card(props) {
-  function handleClick(evt) {
-    evt.preventDefault();
-    console.log("Hello");
-  }
+  const { accommodation } = props;
+
   return (
-    <article className="card" onClick={(evt) => handleClick(evt)}>
-      <img src={props.cover} alt="" />
-      <h2>{props.title}</h2>
-    </article>
+ 
+      <article className="card">
+        <img />
+        <h2>{accommodation.title}</h2>
+      </article>
+
   );
 }
 
