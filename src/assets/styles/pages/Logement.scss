@@ -1,0 +1,17 @@
+.logements {
+  display: flex;
+  justify-content: space-between;
+  h2 {
+    color: $primary;
+  }
+  .left {
+    span {
+      color: $secondary;
+      background-color: $primary;
+      margin-right: 5px;
+    }
+  }
+  .right {
+    width: 190px;
+  }
+}
