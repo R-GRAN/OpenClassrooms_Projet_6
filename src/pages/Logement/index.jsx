@@ -4,13 +4,12 @@ import Caroussel from "@/components/others/Caroussel";
 import Rating from "@/components/others/Rating";
 
 function Logement() {
-  const { accommodationNumber } = useParams();
+  const { id } = useParams();
 
-  const accommodation = accommodations[accommodationNumber - 1];
+  const accommodation = accommodations[id - 1];
 
   return (
     <div>
-      {" "}
       <Caroussel />
       <div className="logements">
         <div className="left">

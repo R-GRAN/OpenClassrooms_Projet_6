@@ -16,7 +16,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <HeaderApp />
       <Routes>
         <Route path="/" element={<Home accommodations={accommodations} />} />
-        <Route path="/logement/:accommodationNumber" element={<Logement />} />
+        <Route path="/logement/:id" element={<Logement />} />
         <Route path="/propos" element={<Propos />} />
         <Route path="*" element={<Error />} />
       </Routes>
