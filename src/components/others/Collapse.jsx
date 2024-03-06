@@ -1,9 +1,9 @@
-function Collapse(props){
-    return(
-        <div>
-            <h2>{props.title}</h2>
-            <p>{props.text}</p>
-        </div>
-    )
+function Collapse(props) {
+  return (
+    <div className="collapse">
+      <h2>{props.title}</h2>
+      <p>{props.text}</p>
+    </div>
+  );
 }
-export default Collapse
+export default Collapse;
