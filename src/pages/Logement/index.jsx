@@ -3,7 +3,7 @@ import accommodations from "@/assets/data/accommodations.json";
 import Caroussel from "@/components/others/Caroussel";
 import Rating from "@/components/others/Rating";
 import Error from "../Error";
-import Collapse from "../../components/others/Collapse";
+import Collapse from "@/components/others/Collapse";
 
 function Logement() {
   const { id } = useParams();
