@@ -6,7 +6,17 @@ import Rating from "@/components/others/Rating";
 function Logement() {
   const { id } = useParams();
 
-  const accommodation = accommodations[id - 1];
+  function getIndexByID(id) {
+    for (let i = 0; i < accommodations.length; i++) {
+      const accommodation = accommodations[i];
+
+      if (id === accommodation.id) {
+        return accommodation;
+      }
+    }
+  }
+
+  const accommodation = getIndexByID(id);
 
   return (
     <div>
