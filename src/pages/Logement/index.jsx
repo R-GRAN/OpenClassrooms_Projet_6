@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import accommodations from "@/assets/data/accommodations.json";
 import Caroussel from "@/components/others/Caroussel";
 import Rating from "@/components/others/Rating";
+import Error from "../Error";
 
 function Logement() {
   const { id } = useParams();
@@ -18,24 +19,28 @@ function Logement() {
 
   const accommodation = getIndexByID(id);
 
-  return (
-    <div>
-      <Caroussel />
-      <div className="logements">
-        <div className="left">
-          <h2>{accommodation.title}</h2>
-          <p>{accommodation.location}</p>
-          <span>{accommodation.tags}</span>
-          <span>{accommodation.rating}</span>
-        </div>
-        <div className="right">
-          <span>{accommodation.host.name}</span>
-          <img src={accommodation.host.picture} alt="" />
-          <Rating accommodation={accommodation} />
+  if (accommodation !== undefined) {
+    return (
+      <div>
+        <Caroussel />
+        <div className="logements">
+          <div className="left">
+            <h2>{accommodation.title}</h2>
+            <p>{accommodation.location}</p>
+            <span>{accommodation.tags}</span>
+            <span>{accommodation.rating}</span>
+          </div>
+          <div className="right">
+            <span>{accommodation.host.name}</span>
+            <img src={accommodation.host.picture} alt="" />
+            <Rating accommodation={accommodation} />
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return <Error />;
+  }
 }
 
 export default Logement;
