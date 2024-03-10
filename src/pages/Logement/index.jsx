@@ -23,13 +23,12 @@ function Logement() {
   if (accommodation !== undefined) {
     return (
       <div>
-        <Caroussel />
+        <Caroussel pictures={accommodation.pictures} />
         <div className="logements">
           <div className="left">
             <h2>{accommodation.title}</h2>
             <p>{accommodation.location}</p>
             <span>{accommodation.tags}</span>
-            <span>{accommodation.rating}</span>
           </div>
           <div className="right">
             <span>{accommodation.host.name}</span>
