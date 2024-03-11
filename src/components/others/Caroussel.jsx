@@ -39,12 +39,15 @@ function Caroussel({ pictures }) {
           />
         ))}
       </div>
-      <button onClick={prevImage}>^</button>
-      <span>
-        {currentPicture + 1}/{pictures.length}
-      </span>
-
-      <button onClick={nextImage}>^</button>
+      {pictures.length > 1 && (
+        <>
+          <button onClick={prevImage}>^</button>
+          <span>
+            {currentPicture + 1}/{pictures.length}
+          </span>
+          <button onClick={nextImage}>^</button>
+        </>
+      )}
     </div>
   );
 }
