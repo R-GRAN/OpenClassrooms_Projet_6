@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Collapse(props) {
+function Collapse({ title, text }) {
   const [visible, setVisible] = useState(true);
 
   function handleCollapse() {
@@ -11,13 +11,26 @@ function Collapse(props) {
     }
   }
 
+  function checkIfEquipment() {
+    if (title === "Equipement") {
+      return (
+        <ul>
+          {text.map((equip) => (
+            <li key={equip}>{equip}</li>
+          ))}
+        </ul>
+      );
+    } else return <p> {text}</p>;
+  }
+
+  const checked = checkIfEquipment();
   return (
     <div className="collapse">
       <div className="title_collapse">
-        <h2>{props.title}</h2>
+        <h2>{title}</h2>
         <button onClick={handleCollapse}>^</button>
       </div>
-      {visible && <p>{props.text}</p>}
+      {visible && checked}
     </div>
   );
 }

@@ -1,15 +1,18 @@
-function Rating(props) {
-  const { accommodation } = props;
-  const rateValue = accommodation.rating;
+function Rating({ rating }) {
+  const rateValue = rating;
 
   const range = [1, 2, 3, 4, 5];
 
   return (
-    <div>
+    <div className="rating">
       {range.map((rangeElem) =>
         rateValue >= rangeElem ? (
+          <span className="on" key={rangeElem.toString()}>
+            *
+          </span>
+        ) : (
           <span key={rangeElem.toString()}>*</span>
-        ) : null
+        )
       )}
     </div>
   );

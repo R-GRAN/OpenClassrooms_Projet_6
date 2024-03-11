@@ -33,7 +33,7 @@ function Logement() {
           <div className="right">
             <span>{accommodation.host.name}</span>
             <img src={accommodation.host.picture} alt="" />
-            <Rating accommodation={accommodation} />
+            <Rating rating={accommodation.rating} />
           </div>
         </div>
         <div className="logements_collapse">

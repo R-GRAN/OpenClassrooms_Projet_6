@@ -1,7 +1,7 @@
-function Banner(props) {
+function Banner({text}) {
   return (
     <div>
-      <h1 className="banner">{props.text}</h1>
+      <h1 className="banner">{text}</h1>
     </div>
   );
 }

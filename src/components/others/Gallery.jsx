@@ -1,7 +1,6 @@
 import Card from "./Card";
-import accommodations from "@/assets/data/accommodations.json";
 
-function Gallery() {
+function Gallery({ accommodations }) {
   return (
     <section className="gallery">
       {accommodations.map((accommodation) => (
