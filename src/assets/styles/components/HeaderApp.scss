@@ -10,5 +10,8 @@ header {
       text-decoration: none;
       color: $fourth;
     }
+    .activeLink {
+      text-decoration: underline;
+    }
   }
 }
