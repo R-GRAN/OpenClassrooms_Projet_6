@@ -1,4 +1,7 @@
 .collapse {
+  margin: 20px;
+  overflow: hidden;
+
   .title_collapse {
     display: flex;
     justify-content: space-between;
@@ -12,11 +15,22 @@
   p {
     margin: 0;
     background-color: $third;
+    animation: dropDown 1s linear;
   }
   ul {
     background-color: $third;
     margin: 0;
     padding: 0;
     list-style: none;
+    animation: dropDown 1s linear;
+  }
+}
+
+@keyframes dropDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateX(0);
   }
 }

@@ -4,6 +4,7 @@ import Caroussel from "@/components/others/Caroussel";
 import Rating from "@/components/others/Rating";
 import Error from "../Error";
 import Collapse from "@/components/others/Collapse";
+import Tags from "../../components/others/Tags";
 
 function Logement() {
   const { id } = useParams();
@@ -28,7 +29,7 @@ function Logement() {
           <div className="left">
             <h2>{accommodation.title}</h2>
             <p>{accommodation.location}</p>
-            <span>{accommodation.tags}</span>
+            <Tags tags={accommodation.tags}/>
           </div>
           <div className="right">
             <span>{accommodation.host.name}</span>

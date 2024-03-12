@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function Collapse({ title, text }) {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
 
   function handleCollapse() {
     if (visible === true) {
