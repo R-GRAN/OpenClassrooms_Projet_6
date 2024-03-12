@@ -49,7 +49,7 @@ function Logement({ accommodations }) {
 }
 
 Logement.propTypes = {
-  accommodations: PropTypes.object,
+  accommodations: PropTypes.array,
 };
 
 export default Logement;
