@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes, { oneOfType } from "prop-types";
 
 function Collapse({ title, text }) {
   const [visible, setVisible] = useState(false);
@@ -34,4 +35,9 @@ function Collapse({ title, text }) {
     </div>
   );
 }
+
+Collapse.propTypes = {
+  title: PropTypes.string,
+  text: oneOfType([PropTypes.string, PropTypes.array]),
+};
 export default Collapse;

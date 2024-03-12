@@ -1,4 +1,5 @@
 import Card from "./Card";
+import PropTypes from "prop-types";
 
 function Gallery({ accommodations }) {
   return (
@@ -9,4 +10,8 @@ function Gallery({ accommodations }) {
     </section>
   );
 }
+
+Gallery.propTypes = {
+  accommodations: PropTypes.array,
+};
 export default Gallery;
