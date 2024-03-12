@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 function Caroussel({ pictures }) {
   const [currentPicture, setCurrentPicture] = useState(0);
@@ -51,5 +52,9 @@ function Caroussel({ pictures }) {
     </div>
   );
 }
+
+Caroussel.propTypes = {
+  pictures: PropTypes.array,
+};
 
 export default Caroussel;

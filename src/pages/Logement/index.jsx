@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
-import accommodations from "@/assets/data/accommodations.json";
+import PropTypes from "prop-types";
 import Caroussel from "@/components/others/Caroussel";
 import Rating from "@/components/others/Rating";
 import Error from "../Error";
 import Collapse from "@/components/others/Collapse";
-import Tags from "../../components/others/Tags";
+import Tags from "@/components/others/Tags";
 
-function Logement() {
+function Logement({ accommodations }) {
   const { id } = useParams();
 
   function getIndexByID(id) {
@@ -29,7 +29,7 @@ function Logement() {
           <div className="left">
             <h2>{accommodation.title}</h2>
             <p>{accommodation.location}</p>
-            <Tags tags={accommodation.tags}/>
+            <Tags tags={accommodation.tags} />
           </div>
           <div className="right">
             <span>{accommodation.host.name}</span>
@@ -47,5 +47,9 @@ function Logement() {
     return <Error />;
   }
 }
+
+Logement.propTypes = {
+  accommodations: PropTypes.object,
+};
 
 export default Logement;
