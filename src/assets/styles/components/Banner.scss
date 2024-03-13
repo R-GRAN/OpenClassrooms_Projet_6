@@ -6,6 +6,7 @@
   background-image: url("@/assets/images/cote.png");
   background-size: cover;
   color: $fourth;
+  filter: brightness(50%);
   margin: 45px;
   border: {
     radius: 25px;

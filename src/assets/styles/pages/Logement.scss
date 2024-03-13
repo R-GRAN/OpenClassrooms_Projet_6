@@ -1,12 +1,10 @@
 .logements {
-  background-color: aqua;
   display: flex;
   justify-content: space-between;
   h2 {
     color: $primary;
   }
   .accomodation_details {
-    background-color: beige;
     span {
       color: $secondary;
       background-color: $primary;
@@ -14,14 +12,10 @@
     }
   }
   .host_details {
-    background-color: pink;
     img {
       width: 64px;
       height: 64px;
       border-radius: 50%;
-    }
-    span {
-      color: $primary;
     }
   }
 }
