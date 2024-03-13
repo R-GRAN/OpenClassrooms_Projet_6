@@ -2,8 +2,11 @@ import { useState } from "react";
 import PropTypes, { oneOfType } from "prop-types";
 
 function Collapse({ title, text }) {
-  const [visible, setVisible] = useState(false);
 
+  const [visible, setVisible] = useState(false);
+  const checked = checkIfEquipment();
+
+  /* fonction gerant le changement d'état de visible lors du clic */
   function handleCollapse() {
     if (visible === true) {
       setVisible(false);
@@ -12,6 +15,7 @@ function Collapse({ title, text }) {
     }
   }
 
+  /* fonction retournant une ul puis mappant text si props === equipement, sinon renvoie un p  */
   function checkIfEquipment() {
     if (title === "Equipement") {
       return (
@@ -24,13 +28,13 @@ function Collapse({ title, text }) {
     } else return <p> {text}</p>;
   }
 
-  const checked = checkIfEquipment();
   return (
     <div className="collapse">
       <div className="title_collapse">
         <h2>{title}</h2>
         <button onClick={handleCollapse}>^</button>
       </div>
+      {/* Condition : s'affiche uniquement si l'état de visible est true */}
       {visible && checked}
     </div>
   );
