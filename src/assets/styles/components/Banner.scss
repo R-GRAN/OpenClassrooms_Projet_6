@@ -3,13 +3,31 @@
   justify-content: center;
   align-items: center;
   height: 223px;
-  background-image: url("@/assets/images/cote.png");
-  background-size: cover;
-  color: $fourth;
-  filter: brightness(50%);
+
   margin: 45px;
   border: {
     radius: 25px;
   }
   box-shadow: 0px 4px 4px 0px #00000040;
+  position: relative;
+  h1 {
+    position: relative;
+    color: $secondary;
+  }
+}
+
+.banner::before {
+  position: absolute;
+  content: "";
+  background-image: url("@/assets/images/cote.png");
+  background-size: cover;
+  background-position: center;
+  border: {
+    radius: 25px;
+  }
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  filter: brightness(50%);
 }

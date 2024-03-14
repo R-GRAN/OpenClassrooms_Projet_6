@@ -1,10 +1,18 @@
 .gallery {
+  padding: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
   min-height: 200px;
   background-color: $third;
   margin: 45px;
   border: {
     radius: 25px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .gallery {
+    grid-template-columns: 1fr;
   }
 }

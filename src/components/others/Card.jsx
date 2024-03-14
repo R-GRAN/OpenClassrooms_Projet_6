@@ -6,7 +6,9 @@ function Card({ accommodation }) {
     <Link to={`/logement/${accommodation.id}`}>
       <article className="card">
         <img src={accommodation.cover} />
-        <h2>{accommodation.title}</h2>
+        <div className="card_title">
+          <h2>{accommodation.title}</h2>
+        </div>
       </article>
     </Link>
   );

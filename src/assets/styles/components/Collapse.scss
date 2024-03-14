@@ -1,11 +1,23 @@
 .collapse {
-  margin: 20px;
   overflow: hidden;
+  width: 582px;
+  margin: 20px;
 
   .title_collapse {
     display: flex;
     justify-content: space-between;
     background-color: $primary;
+    position: sticky;
+    z-index: 1;
+    button {
+      background-color: transparent;
+      color: $third;
+      border: none;
+
+      &.rotate {
+        animation: rotation 1s linear;
+      }
+    }
   }
   h2 {
     margin: 0;
@@ -32,5 +44,14 @@
   }
   to {
     transform: translateX(0);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(180deg);
   }
 }

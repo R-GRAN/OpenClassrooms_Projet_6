@@ -2,13 +2,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 45px;
   nav {
     display: flex;
-    width: 400px;
+    width: 300px;
     justify-content: space-around;
     a {
       text-decoration: none;
       color: $fourth;
+      margin-left: auto;
     }
     .activeLink {
       text-decoration: underline;

@@ -2,8 +2,7 @@ import { useState } from "react";
 import PropTypes, { oneOfType } from "prop-types";
 
 function Collapse({ title, text }) {
-
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
   const checked = checkIfEquipment();
 
   /* fonction gerant le changement d'état de visible lors du clic */
@@ -32,7 +31,12 @@ function Collapse({ title, text }) {
     <div className="collapse">
       <div className="title_collapse">
         <h2>{title}</h2>
-        <button onClick={handleCollapse}>^</button>
+        <button
+          className={visible ? "button rotate" : "button"}
+          onClick={handleCollapse}
+        >
+          ^
+        </button>
       </div>
       {/* Condition : s'affiche uniquement si l'état de visible est true */}
       {visible && checked}

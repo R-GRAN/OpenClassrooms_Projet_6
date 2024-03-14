@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 
 function Banner({text}) {
   return (
-    <div>
-      <h1 className="banner">{text}</h1>
+    <div className="banner">
+      <h1 >{text}</h1>
     </div>
   );
 }

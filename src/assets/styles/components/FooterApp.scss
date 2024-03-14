@@ -1,8 +1,8 @@
 footer {
   display: flex;
+  height: 209px;
   background-color: black;
   color: white;
-  padding: 10px;
   justify-content: center;
   align-items: center;
   div {
@@ -11,6 +11,7 @@ footer {
     align-items: center;
     img {
       width: 122px;
+      margin:25px
     }
   }
 }
