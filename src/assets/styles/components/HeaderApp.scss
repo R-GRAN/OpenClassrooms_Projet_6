@@ -3,6 +3,9 @@ header {
   justify-content: space-between;
   align-items: center;
   margin: 45px;
+  img {
+    width: 210px;
+  }
   nav {
     display: flex;
     width: 300px;
@@ -14,6 +17,14 @@ header {
     }
     .activeLink {
       text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  header {
+    img {
+      width: 120px;
     }
   }
 }

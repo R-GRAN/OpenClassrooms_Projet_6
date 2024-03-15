@@ -8,7 +8,6 @@
 
   img {
     position: absolute;
-    height: 415px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -31,8 +30,12 @@
       background: transparent;
       top: 0;
       bottom: 0;
-      width: 20%;
+      width: 12%;
       border: none;
+      i {
+        color: $secondary;
+        transform: scale(6);
+      }
     }
     .ctrl_prev {
       left: 0;

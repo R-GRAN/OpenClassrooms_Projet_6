@@ -5,14 +5,16 @@ import { aboutList } from "@/assets/data/aboutList.js";
 function Propos() {
   return (
     <div>
-      <Banner/>
-      {aboutList.map((aboutListElem) => (
-        <Collapse
-          key={aboutListElem.title}
-          title={aboutListElem.title}
-          text={aboutListElem.content}
-        />
-      ))}
+      <Banner />
+      <div className="aboutList_container">
+        {aboutList.map((aboutListElem) => (
+          <Collapse
+            key={aboutListElem.title}
+            title={aboutListElem.title}
+            text={aboutListElem.content}
+          />
+        ))}
+      </div>
     </div>
   );
 }

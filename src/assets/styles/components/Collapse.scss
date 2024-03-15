@@ -1,7 +1,6 @@
 .collapse {
   overflow: hidden;
-  width: 582px;
-  margin: 20px;
+  margin-bottom: 25px;
 
   .title_collapse {
     display: flex;
@@ -9,13 +8,19 @@
     background-color: $primary;
     position: sticky;
     z-index: 1;
+    padding: 8px;
+    border-radius: 5px;
     button {
       background-color: transparent;
       color: $third;
       border: none;
-
+      margin-right: 10px;
       &.rotate {
-        animation: rotation 1s linear;
+        animation: rotation 3s linear;
+      }
+
+      i {
+        transform: scale(1.5);
       }
     }
   }
@@ -25,14 +30,13 @@
     color: $secondary;
   }
   p {
-    margin: 0;
+    padding: 10px;
     background-color: $third;
     animation: dropDown 1s linear;
   }
   ul {
+    padding: 10px;
     background-color: $third;
-    margin: 0;
-    padding: 0;
     list-style: none;
     animation: dropDown 1s linear;
   }

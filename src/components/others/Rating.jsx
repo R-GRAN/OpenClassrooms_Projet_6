@@ -10,10 +10,10 @@ function Rating({ rating }) {
       {range.map((rangeElem) =>
         rateValue >= rangeElem ? (
           <span className="on" key={rangeElem.toString()}>
-            ★
+            <i className="fa-solid fa-star"></i>
           </span>
         ) : (
-          <span key={rangeElem.toString()}>★</span>
+          <span key={rangeElem.toString()}><i className="fa-solid fa-star"></i></span>
         )
       )}
     </div>

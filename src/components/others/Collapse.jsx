@@ -35,7 +35,7 @@ function Collapse({ title, text }) {
           className={visible ? "button rotate" : "button"}
           onClick={handleCollapse}
         >
-          ^
+          <i className="fa-solid fa-chevron-up"></i>
         </button>
       </div>
       {/* Condition : s'affiche uniquement si l'état de visible est true */}
