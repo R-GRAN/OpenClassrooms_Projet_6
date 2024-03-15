@@ -1,8 +1,5 @@
 .slideshow {
-  margin: 25px;
-  color: $secondary;
-  background-color: red;
-
+  margin: 45px;
   .picture_container {
     position: relative;
     height: 500px;
@@ -15,9 +12,38 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 25px;
     opacity: 0;
     &.show {
       opacity: 1;
+    }
+  }
+
+  .ctrls {
+    position: absolute;
+    color: $secondary;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    button {
+      position: absolute;
+      background: transparent;
+      top: 0;
+      bottom: 0;
+      width: 20%;
+      border: none;
+    }
+    .ctrl_prev {
+      left: 0;
+    }
+    .ctrl_next {
+      right: 0;
+    }
+    .current_count {
+      position: absolute;
+      top: 85%;
+      left: 50%;
     }
   }
 }

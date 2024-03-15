@@ -43,17 +43,17 @@ function Slideshow({ pictures }) {
             className={putClassnameByIndex(index)}
           />
         ))}
-      </div>
       {/* Condition : affiche uniquement s'il y a plus d'une photo */}
       {pictures.length > 1 && (
-        <>
-          <button onClick={prevImage}>^</button>
-          <span>
+        <div className="ctrls">
+          <button className="ctrl_prev" onClick={prevImage}>^</button>
+          <span className="current_count">
             {currentPicture + 1}/{pictures.length}
           </span>
-          <button onClick={nextImage}>^</button>
-        </>
+          <button className="ctrl_next" onClick={nextImage}>^</button>
+        </div>
       )}
+      </div>
     </div>
   );
 }
