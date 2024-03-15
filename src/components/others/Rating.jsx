@@ -13,7 +13,9 @@ function Rating({ rating }) {
             <i className="fa-solid fa-star"></i>
           </span>
         ) : (
-          <span key={rangeElem.toString()}><i className="fa-solid fa-star"></i></span>
+          <span key={rangeElem.toString()} className="off">
+            <i className="fa-solid fa-star"></i>
+          </span>
         )
       )}
     </div>
