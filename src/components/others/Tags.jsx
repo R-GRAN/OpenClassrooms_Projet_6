@@ -2,9 +2,9 @@ import PropTypes from "prop-types";
 
 function Tags({tags}) {
   return (
-    <div>
+    <div className="tags">
       {tags.map((tag) => (
-        <span key={tag}>{tag}</span>
+        <span className="tag" key={tag}>{tag}</span>
       ))}
     </div>
   );

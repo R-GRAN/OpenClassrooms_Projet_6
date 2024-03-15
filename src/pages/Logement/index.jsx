@@ -33,8 +33,10 @@ function Logement({ accommodations }) {
             <Tags tags={accommodation.tags} />
           </div>
           <div className="host_details">
-            <span>{accommodation.host.name}</span>
-            <img src={accommodation.host.picture} alt="" />
+            <div className="host_presentation">
+              <span>{accommodation.host.name}</span>
+              <img src={accommodation.host.picture} alt="" />
+            </div>
             <Rating rating={accommodation.rating} />
           </div>
         </div>
