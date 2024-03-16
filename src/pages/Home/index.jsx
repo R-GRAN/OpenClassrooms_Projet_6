@@ -5,7 +5,10 @@ import PropTypes from "prop-types";
 function Home({ accommodations }) {
   return (
     <div>
-      <Banner text="Chez vous, partout et ailleurs" />
+      <Banner
+        picture={"src/assets/images/cote.png"}
+        text={"Chez vous, partout et ailleurs"}
+      />
       <Gallery accommodations={accommodations} />
     </div>
   );

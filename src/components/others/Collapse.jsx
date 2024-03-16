@@ -32,7 +32,7 @@ function Collapse({ title, text }) {
       <div className="title_collapse">
         <h2>{title}</h2>
         <button
-          className={visible ? "button rotate" : "button"}
+          className={visible ? "button rotate" : "button "}
           onClick={handleCollapse}
         >
           <i className="fa-solid fa-chevron-up"></i>

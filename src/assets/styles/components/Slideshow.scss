@@ -49,4 +49,17 @@
       left: 50%;
     }
   }
+  
+  @media screen and (max-width: 780px) {
+    .picture_container {
+      height: 255px;
+    }
+    .ctrls {
+      button {
+        i {
+          transform: scale(2);
+        }
+      }
+    }
+  }
 }

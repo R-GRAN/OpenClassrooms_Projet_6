@@ -1,15 +1,19 @@
 import PropTypes from "prop-types";
 
-function Banner({text}) {
+function Banner({ picture, text }) {
   return (
     <div className="banner">
-      <h1 >{text}</h1>
+      <img src={picture} alt="" />
+      <div className="banner_title">
+        <h1>{text}</h1>
+      </div>
     </div>
   );
 }
 
 Banner.propTypes = {
   text: PropTypes.string,
+  picture: PropTypes.string,
 };
 
 export default Banner;
