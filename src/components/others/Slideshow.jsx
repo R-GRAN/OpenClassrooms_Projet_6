@@ -1,5 +1,4 @@
 import { useState } from "react";
-import PropTypes from "prop-types";
 
 function Slideshow({ pictures }) {
   /* gestion de l'etat de la photo actuellement affichée */
@@ -61,9 +60,5 @@ function Slideshow({ pictures }) {
     </div>
   );
 }
-
-Slideshow.propTypes = {
-  pictures: PropTypes.array,
-};
 
 export default Slideshow;

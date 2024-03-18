@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
 
 function Card({ accommodation }) {
   return (
@@ -13,7 +12,5 @@ function Card({ accommodation }) {
     </Link>
   );
 }
-Card.propTypes = {
-  accommodation: PropTypes.object,
-};
+
 export default Card;

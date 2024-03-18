@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 function Banner({ picture, text }) {
   return (
     <div className="banner">
@@ -11,9 +9,5 @@ function Banner({ picture, text }) {
   );
 }
 
-Banner.propTypes = {
-  text: PropTypes.string,
-  picture: PropTypes.string,
-};
 
 export default Banner;
