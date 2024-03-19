@@ -1,5 +1,6 @@
 .card {
   height: 100%;
+  min-height: 185px;
   position: relative;
   color: $secondary;
   img {
@@ -12,8 +13,13 @@
   }
   .card_title {
     position: absolute;
-    background-color: transparent;
+    display: flex;
+    align-items: flex-end;
     bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    background: linear-gradient(349deg, #0000001f, transparent);
     padding: 20px;
     h2 {
       font-size: 18px;

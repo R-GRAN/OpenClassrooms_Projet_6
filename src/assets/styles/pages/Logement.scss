@@ -1,5 +1,5 @@
 .logements {
-  margin: 45px;
+  margin: 20px;
   display: flex;
   justify-content: space-between;
   h2 {
@@ -19,22 +19,43 @@
 }
 .logements_collapse {
   display: flex;
-  margin: 45px;
+  margin: 20px;
   justify-content: space-between;
-  gap: 20px;
-  .collapse{
+  gap: 76px;
+  .collapse {
     flex-basis: 50%;
   }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (min-width: 426px) and (max-width: 780px) {
+  .logements_collapse {
+    gap: 35px;
+  }
+}
+
+@media screen and (max-width: 425px) {
   .logements {
     flex-flow: column;
+    h2 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 14px;
+    }
     .host_details {
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-between;
       align-items: center;
+      .host_presentation {
+        img {
+          width: 32px;
+          height: 32px;
+        }
+        span {
+          font-size: 12px;
+        }
+      }
     }
   }
   .logements_collapse {

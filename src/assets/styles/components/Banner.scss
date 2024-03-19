@@ -4,8 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 223px;
-
-  margin: 45px;
+  margin: 20px;
   border: {
     radius: 25px;
   }
@@ -24,15 +23,25 @@
   .banner_title {
     position: absolute;
     h1 {
+      padding: 10px;
       color: white;
     }
   }
 }
 
+@media screen and (min-width: 426px) and (max-width: 780px) {
+  .banner {
+    height: 162px;
+    h1 {
+      font-size: 30px;
+    }
+  }
+}
 
-@media screen and (max-width: 780px) {
-  .banner{
+@media screen and (max-width: 425px) {
+  .banner {
     height: 111px;
-  
+    h1 {
+      font-size: 24px;    }
   }
 }

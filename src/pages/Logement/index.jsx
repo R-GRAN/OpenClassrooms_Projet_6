@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-import PropTypes from "prop-types";
 import Slideshow from "@/components/others/Slideshow";
 import Rating from "@/components/others/Rating";
 import Error from "../Error";

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function Collapse({ title, text }) {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
   const checked = checkIfEquipment();
 
   /* fonction gerant le changement d'état de visible lors du clic */
@@ -29,7 +29,7 @@ function Collapse({ title, text }) {
   return (
     <div className="collapse">
       <div className="title_collapse">
-        <h2>{title}</h2>
+        <h3>{title}</h3>
         <button
           className={visible ? "button rotate" : "button "}
           onClick={handleCollapse}

@@ -10,7 +10,7 @@
     z-index: 1;
     padding: 8px;
     border-radius: 5px;
-    h2 {
+    h3 {
       margin: 0;
 
       color: $secondary;
@@ -40,15 +40,6 @@
   }
 }
 
-@keyframes dropDownOpen {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -63,5 +54,46 @@
   }
   to {
     transform: rotate(0deg);
+  }
+}
+
+@keyframes dropDownOpen {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 780px) {
+  .collapse {
+    .title_collapse h3 {
+      font-size: 20px;
+    }
+    .title_collapse button i {
+      transform: scale(1.25);
+    }
+    p,
+    ul {
+      padding: 7px;
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .collapse {
+    .title_collapse h3 {
+      font-size: 13px;
+    }
+    .title_collapse button i {
+      transform: scale(1);
+    }
+    p,
+    ul {
+      padding: 5px;
+      font-size: 11px;
+    }
   }
 }
