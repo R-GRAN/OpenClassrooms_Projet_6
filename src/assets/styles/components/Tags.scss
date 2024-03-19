@@ -1,6 +1,6 @@
 .tags {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 120px));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
   gap: 10px;
   margin: 25px 0;
   .tag {
@@ -15,7 +15,7 @@
 
 @media screen and (min-width: 426px) and (max-width: 780px) {
   .tags {
-    grid-template-columns: repeat(auto-fit, minmax(80px, 100px));
+    grid-template-columns: repeat(auto-fit, minmax(80px, 125px));
     gap: 10px;
     width: 100%;
     margin: 10px 0;
