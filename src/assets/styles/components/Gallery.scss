@@ -10,6 +10,12 @@
   }
 }
 
+@media screen and (min-width: 426px) and (max-width: 780px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .gallery {
     grid-template-columns: 1fr;

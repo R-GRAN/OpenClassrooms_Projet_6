@@ -1,16 +1,35 @@
 .tags {
-  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 120px));
+  gap: 10px;
+  margin: 25px 0;
   .tag {
     border-radius: 10px;
-    padding: 3px 5px;
+    padding: 2px;
+    font-size: 14px;
     color: $secondary;
     background-color: $primary;
-    margin-right: 5px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 780px) {
+  .tags {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 100px));
+    gap: 10px;
+    width: 100%;
+    margin: 10px 0;
+    .tag {
+      font-size: 12px;
+    }
   }
 }
 
 @media screen and (max-width: 425px) {
   .tags {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 100px));
+    gap: 10px;
+    margin: 10px 0;
     .tag {
       font-size: 10px;
     }

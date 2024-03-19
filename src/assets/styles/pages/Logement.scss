@@ -1,13 +1,18 @@
 .logements {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
   h2 {
     color: $primary;
   }
+  .accomodation_details {
+    width: 100%;
+  }
   .host_details {
-    text-align: end;
     .host_presentation {
       color: $primary;
+      text-align: end;
+      margin-bottom: 10px;
       img {
         width: 64px;
         height: 64px;
@@ -17,6 +22,7 @@
   }
 }
 .logements_collapse {
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
   gap: 76px;
@@ -26,6 +32,31 @@
 }
 
 @media screen and (min-width: 426px) and (max-width: 780px) {
+  .logements {
+    flex-flow: column;
+    h2 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 14px;
+    }
+    .host_details {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      .host_presentation {
+        img {
+          width: 48px;
+          height: 48px;
+        }
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
   .logements_collapse {
     gap: 35px;
   }
