@@ -1,11 +1,10 @@
 .gallery {
-  padding: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+  padding: 20px;
   min-height: 200px;
   background-color: $third;
-  margin: 20px;
   border: {
     radius: 25px;
   }

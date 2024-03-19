@@ -4,7 +4,7 @@ import { aboutList } from "@/assets/data/aboutList.js";
 
 function Propos() {
   return (
-    <div>
+    <>
       <Banner picture={"src/assets/images/montagne.png"} />
       <div className="aboutList_container">
         {aboutList.map((aboutListElem) => (
@@ -15,7 +15,7 @@ function Propos() {
           />
         ))}
       </div>
-    </div>
+    </>
   );
 }
 

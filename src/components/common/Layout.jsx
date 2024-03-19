@@ -3,11 +3,11 @@ import FooterApp from "./FooterApp";
 
 function Layout({ children }) {
   return (
-    <>
+    <div className="layout">
       <HeaderApp />
-      {children}
+      <div className="container">{children}</div>
       <FooterApp />
-    </>
+    </div>
   );
 }
 export default Layout;

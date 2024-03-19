@@ -7,8 +7,6 @@ import Logement from "./pages/Logement/index.jsx";
 import Error from "./pages/Error/index.jsx";
 import "./assets/styles/main.scss";
 import Layout from "./components/common/Layout.jsx";
-import HeaderApp from "./components/common/HeaderApp.jsx";
-import FooterApp from "./components/common/FooterApp.jsx";
 import accommodations from "./assets/data/accommodations.json";
 
 ReactDOM.createRoot(document.getElementById("root")).render(

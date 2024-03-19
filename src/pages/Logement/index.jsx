@@ -23,7 +23,7 @@ function Logement({ accommodations }) {
   /* Si l'appartement est trouvé, retourne le jsx, sinon retourne le composant Error */
   if (accommodation !== undefined) {
     return (
-      <div>
+      <>
         <Slideshow pictures={accommodation.pictures} />
         <div className="logements">
           <div className="accomodation_details">
@@ -43,7 +43,7 @@ function Logement({ accommodations }) {
           <Collapse title="Description" text={accommodation.description} />
           <Collapse title="Equipement" text={accommodation.equipments} />
         </div>
-      </div>
+      </>
     );
   } else {
     return <Error />;

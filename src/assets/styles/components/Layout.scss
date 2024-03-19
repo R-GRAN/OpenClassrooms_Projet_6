@@ -1,0 +1,15 @@
+.layout {
+  min-height: 100vh;
+  .container {
+    min-height: 65vh;
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .layout {
+    .container {
+      padding: 0 20px;
+    }
+  }
+}
