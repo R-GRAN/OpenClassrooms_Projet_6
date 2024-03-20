@@ -7,12 +7,26 @@
   }
   .accomodation_details {
     width: 100%;
+    p {
+      margin-top: 10px;
+    }
   }
   .host_details {
     .host_presentation {
       color: $primary;
-      text-align: end;
+      display: flex;
+      justify-content: flex-end;
+
       margin-bottom: 10px;
+      .host_name {
+        align-content: end;
+        align-self: center;
+        margin-right: 10px;
+        span {
+          display: block;
+          text-align: end;
+        }
+      }
       img {
         width: 64px;
         height: 64px;
@@ -22,7 +36,7 @@
   }
 }
 .logements_collapse {
-  margin-top: 10px;
+  margin-top: 15px;
   display: flex;
   justify-content: space-between;
   gap: 76px;
@@ -58,7 +72,7 @@
   }
 
   .logements_collapse {
-    gap: 35px;
+    display: block;
   }
 }
 

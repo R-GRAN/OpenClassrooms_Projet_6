@@ -22,6 +22,8 @@ function Logement({ accommodations }) {
 
   /* Si l'appartement est trouvé, retourne le jsx, sinon retourne le composant Error */
   if (accommodation !== undefined) {
+    const [firstName, lastName] = accommodation.host.name.split(" ");
+
     return (
       <>
         <Slideshow pictures={accommodation.pictures} />
@@ -33,7 +35,11 @@ function Logement({ accommodations }) {
           </div>
           <div className="host_details">
             <div className="host_presentation">
-              <span>{accommodation.host.name}</span>
+              <div className="host_name">
+                <span>{firstName}</span>
+                <span>{lastName}</span>
+              </div>
+
               <img src={accommodation.host.picture} alt="" />
             </div>
             <Rating rating={accommodation.rating} />
