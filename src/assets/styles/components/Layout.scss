@@ -1,15 +1,21 @@
 .layout {
-  min-height: 100vh;
   .container {
-    height: 100%;
-    padding: 0 40px;
+    padding: 40px;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 780px) {
+  .layout {
+    .container {
+      padding: 30px;
+    }
   }
 }
 
 @media screen and (max-width: 425px) {
   .layout {
     .container {
-      padding: 0 20px;
+      padding: 20px;
     }
   }
 }

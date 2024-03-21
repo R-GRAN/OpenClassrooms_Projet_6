@@ -1,5 +1,5 @@
 header {
-  margin: 20px 40px;
+  margin: 40px 40px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,18 +24,19 @@ header {
 
 @media screen and (min-width: 426px) and (max-width: 780px) {
   header {
+    margin: 30px 30px 0;
     nav {
       font-size: 18px;
     }
     img {
-      width: 180px;
+      width: 160px;
     }
   }
 }
 
 @media screen and (max-width: 425px) {
   header {
-    margin: 20px;
+    margin: 20px 20px 0;
     nav {
       font-size: 12px;
       text-transform: uppercase;

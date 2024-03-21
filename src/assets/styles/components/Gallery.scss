@@ -19,5 +19,8 @@
 @media screen and (max-width: 425px) {
   .gallery {
     grid-template-columns: 1fr;
+    padding: 0;
+    background: transparent;
+    gap: 15px;
   }
 }
