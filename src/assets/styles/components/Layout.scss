@@ -1,21 +1,22 @@
+$container-padding-lg: 40px;
+$container-padding-md: 30px;
+$container-padding-sm: 20px;
+
+
+@mixin container-styles($padding) {
+  padding: $padding;
+}
+
 .layout {
   .container {
-    padding: 40px;
-  }
-}
+    @include container-styles($container-padding-lg);
 
-@media screen and (min-width: 426px) and (max-width: 780px) {
-  .layout {
-    .container {
-      padding: 30px;
+    @media screen and (min-width: 426px) and (max-width: 780px) {
+      @include container-styles($container-padding-md);
     }
-  }
-}
 
-@media screen and (max-width: 425px) {
-  .layout {
-    .container {
-      padding: 20px;
+    @media screen and (max-width: 425px) {
+      @include container-styles($container-padding-sm);
     }
   }
 }

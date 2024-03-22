@@ -1,26 +1,35 @@
-.rating {
+$rating-width-lg: 200px;
+$rating-width-md: 150px;
+$rating-width-sm: 100px;
+$rating-font-size-lg: 24px;
+$rating-font-size-md: 19px;
+$rating-font-size-sm: 13px;
+$on-color: $primary;
+$off-color: $third;
+
+@mixin rating-styles($width, $font-size, $on-color, $off-color) {
   display: flex;
   justify-content: space-between;
-  width: 200px;
-  font-size: 24px;
+  width: $width;
+  font-size: $font-size;
+
   .on {
-    color: $primary;
+    color: $on-color;
   }
   .off {
-    color: rgb(199, 198, 198);
+    color: $off-color;
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 780px) {
-  .rating {
-    width: 150px;
-    font-size: 19px;
+.rating {
+  @include rating-styles($rating-width-lg, $rating-font-size-lg, $on-color, $off-color);
+
+  @media screen and (min-width: 426px) and (max-width: 780px) {
+    @include rating-styles($rating-width-md, $rating-font-size-md, $on-color, $off-color);
+  }
+
+  @media screen and (max-width: 425px) {
+    @include rating-styles($rating-width-sm, $rating-font-size-sm, $on-color, $off-color);
   }
 }
 
-@media screen and (max-width: 425px) {
-  .rating {
-    font-size: 13px;
-    width: 100px;
-  }
-}

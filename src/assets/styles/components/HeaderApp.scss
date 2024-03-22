@@ -1,14 +1,26 @@
-header {
-  margin: 40px 40px 0;
+$header-margin-lg: 40px 40px 0;
+$header-margin-md: 30px 30px 0;
+$header-margin-sm: 20px 20px 0;
+$header-font-size-lg: 24px;
+$header-font-size-md: 18px;
+$header-font-size-sm: 12px;
+$header-img-width-lg: 210px;
+$header-img-width-md: 160px;
+$header-img-width-sm: 120px;
+
+@mixin header-styles($margin, $font-size, $img-width) {
+  margin: $margin;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   img {
-    width: 210px;
+    width: $img-width;
   }
+
   nav {
     display: flex;
-    font-size: 24px;
+    font-size: $font-size;
     width: 300px;
     justify-content: space-around;
     a {
@@ -22,27 +34,18 @@ header {
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 780px) {
-  header {
-    margin: 30px 30px 0;
-    nav {
-      font-size: 18px;
-    }
-    img {
-      width: 160px;
-    }
-  }
-}
+header {
+  @include header-styles($header-margin-lg, $header-font-size-lg, $header-img-width-lg);
 
-@media screen and (max-width: 425px) {
-  header {
-    margin: 20px 20px 0;
+  @media screen and (min-width: 426px) and (max-width: 780px) {
+    @include header-styles($header-margin-md, $header-font-size-md, $header-img-width-md);
+  }
+
+  @media screen and (max-width: 425px) {
+    @include header-styles($header-margin-sm, $header-font-size-sm, $header-img-width-sm);
     nav {
-      font-size: 12px;
+      font-size: $header-font-size-sm;
       text-transform: uppercase;
-    }
-    img {
-      width: 120px;
     }
   }
 }

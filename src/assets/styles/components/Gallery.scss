@@ -1,26 +1,31 @@
-.gallery {
+$gallery-gap-lg: 20px;
+$gallery-padding-lg: 20px;
+$gallery-height: 200px;
+$gallery-background: $third;
+$gallery-border-radius: 25px;
+$gallery-gap-sm: 15px;
+$gallery-padding-sm: 0;
+
+@mixin gallery-styles($gap, $padding, $height, $background, $border-radius) {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  padding: 20px;
-  min-height: 200px;
-  background-color: $third;
-  border: {
-    radius: 25px;
-  }
-}
+  gap: $gap;
+  padding: $padding;
+  min-height: $height;
+  background-color: $background;
+  border-radius: $border-radius;
 
-@media screen and (min-width: 426px) and (max-width: 780px) {
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .gallery {
-    grid-template-columns: 1fr;
-    padding: 0;
+  @media screen and (max-width: 425px) {
+    padding: $gallery-padding-sm;
     background: transparent;
-    gap: 15px;
+    gap: $gallery-gap-sm;
+  }
+}
+
+.gallery {
+  @include gallery-styles($gallery-gap-lg, $gallery-padding-lg, $gallery-height, $gallery-background, $gallery-border-radius);
+
+  @media screen and (min-width: 426px) and (max-width: 780px) {
+    grid-template-columns: 1fr;
   }
 }
