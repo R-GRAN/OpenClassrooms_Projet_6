@@ -33,6 +33,7 @@ function Collapse({ title, text }) {
         <button
           className={visible ? "button rotate" : "button "}
           onClick={handleCollapse}
+          aria-label="Bouton de bascule du contenu"
         >
           <i className="fa-solid fa-chevron-up"></i>
         </button>

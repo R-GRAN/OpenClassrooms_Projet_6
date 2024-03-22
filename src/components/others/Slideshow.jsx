@@ -5,7 +5,7 @@ function Slideshow({ pictures }) {
   const [currentPicture, setCurrentPicture] = useState(0);
 
   /* Fonction modifiant la classe de photo actuellement affichée */
-  function putClassnameByIndex(index) {
+  function changeClassnameByIndex(index) {
     if (currentPicture === index) {
       return "show";
     } else {
@@ -38,20 +38,28 @@ function Slideshow({ pictures }) {
           <img
             key={picture}
             src={picture}
-            alt=""
-            className={putClassnameByIndex(index)}
+            alt="image de l'appartement"
+            className={changeClassnameByIndex(index)}
           />
         ))}
         {/* Condition : affiche uniquement s'il y a plus d'une photo */}
         {pictures.length > 1 && (
           <div className="ctrls">
-            <button className="ctrl_prev" onClick={prevImage}>
+            <button
+              className="ctrl_prev"
+              onClick={prevImage}
+              aria-label="image précèdente"
+            >
               <i className="fa-solid fa-chevron-left"></i>
             </button>
             <span className="current_count">
               {currentPicture + 1}/{pictures.length}
             </span>
-            <button className="ctrl_next" onClick={nextImage}>
+            <button
+              className="ctrl_next"
+              onClick={nextImage}
+              aria-label="image suivante"
+            >
               <i className="fa-solid fa-chevron-right"></i>
             </button>
           </div>
