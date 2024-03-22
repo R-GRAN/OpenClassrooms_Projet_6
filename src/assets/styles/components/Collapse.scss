@@ -1,23 +1,30 @@
-.collapse {
+$collapse-margin-bottom: 25px;
+$collapse-background: $primary;
+$collapse-title-padding: 8px;
+$collapse-title-border-radius: 5px;
+$collapse-title-color: $secondary;
+$collapse-title-button-color: $third;
+
+
+@mixin collapse-styles {
   overflow: hidden;
-  margin-bottom: 25px;
+  margin-bottom: $collapse-margin-bottom;
 
   .title_collapse {
     display: flex;
     justify-content: space-between;
-    background-color: $primary;
+    background-color: $collapse-background;
     position: relative;
     z-index: 1;
-    padding: 8px;
-    border-radius: 5px;
+    padding: $collapse-title-padding;
+    border-radius: $collapse-title-border-radius;
     h3 {
       margin: 0;
-
-      color: $secondary;
+      color: $collapse-title-color;
     }
     button {
       background-color: transparent;
-      color: $third;
+      color: $collapse-title-button-color;
       border: none;
       margin-right: 10px;
       cursor: pointer;
@@ -31,42 +38,39 @@
       }
     }
   }
-  p,
-  ul {
+
+  p, ul {
     padding: 10px;
-    background-color: $third;
+    background-color: $collapse-title-button-color;
     list-style: none;
     animation: dropDownOpen 300ms linear;
   }
 }
 
+.collapse {
+  @include collapse-styles;
 
-@media screen and (min-width: 426px) and (max-width: 780px) {
-  .collapse {
+  @media screen and (min-width: 426px) and (max-width: 780px) {
     .title_collapse h3 {
       font-size: 20px;
     }
     .title_collapse button i {
       transform: scale(1.25);
     }
-    p,
-    ul {
+    p, ul {
       padding: 7px;
       font-size: 16px;
     }
   }
-}
 
-@media screen and (max-width: 780px) {
-  .collapse {
+  @media screen and (max-width: 780px) {
     .title_collapse h3 {
       font-size: 13px;
     }
     .title_collapse button i {
       transform: scale(1);
     }
-    p,
-    ul {
+    p, ul {
       padding: 5px;
       font-size: 11px;
     }

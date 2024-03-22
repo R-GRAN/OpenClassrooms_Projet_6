@@ -1,18 +1,27 @@
-.banner {
+
+$banner-height-lg: 223px;
+$banner-height-md: 162px;
+$banner-height-sm: 111px;
+$banner-margin-bottom-lg: 40px;
+$banner-margin-bottom-md: 30px;
+$banner-margin-bottom-sm: 20px;
+$banner-border-radius: 25px;
+
+@mixin banner-styles($height, $margin-bottom, $font-size) {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 223px;
-  margin-bottom: 40px;
-  border-radius: 25px;
+  height: $height;
+  margin-bottom: $margin-bottom;
+  border-radius: $banner-border-radius;
   box-shadow: 0px 4px 4px 0px #00000040;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 25px;
+    border-radius: $banner-border-radius;
     filter: brightness(50%);
   }
 
@@ -21,22 +30,19 @@
     h1 {
       padding: 10px;
       color: white;
+      font-size: $font-size;
     }
   }
+}
+
+.banner {
+  @include banner-styles($banner-height-lg, $banner-margin-bottom-lg, 30px);
 
   @media screen and (min-width: 426px) and (max-width: 780px) {
-    height: 162px;
-    margin-bottom: 30px;
-    h1 {
-      font-size: 30px;
-    }
+    @include banner-styles($banner-height-md, $banner-margin-bottom-md, 24px);
   }
 
   @media screen and (max-width: 425px) {
-    height: 111px;
-    margin-bottom: 20px;
-    h1 {
-      font-size: 24px;
-    }
+    @include banner-styles($banner-height-sm, $banner-margin-bottom-sm, 18px);
   }
 }

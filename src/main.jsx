@@ -15,7 +15,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Layout>
         <Routes>
           <Route path="/" element={<Home accommodations={accommodations} />} />
-
           <Route
             path="/logement/:id"
             element={<Logement accommodations={accommodations} />}
