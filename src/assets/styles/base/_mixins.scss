@@ -63,46 +63,46 @@
 
 //Collapse mixin
 @mixin collapse-styles {
-  overflow: hidden;
-  margin-bottom: $collapse-margin-bottom;
-
-  .title_collapse {
-    display: flex;
-    justify-content: space-between;
-    background-color: $collapse-background;
-    position: relative;
-    z-index: 1;
-    padding: $collapse-title-padding;
-    border-radius: $collapse-title-border-radius;
-    h3 {
-      margin: 0;
-      color: $collapse-title-color;
+    overflow: hidden;
+    margin-bottom: $collapse-margin-bottom;
+  
+    .title_collapse {
+      display: flex;
+      justify-content: space-between;
+      background-color: $collapse-background;
+      position: relative;
+      z-index: 1;
+      padding: $collapse-title-padding;
+      border-radius: $collapse-title-border-radius;
+      h3 {
+        margin: 0;
+        color: $collapse-title-color;
+      }
+      button {
+        background-color: transparent;
+        border: none;
+        margin-right: 10px;
+        cursor: pointer;
+        animation: cancelRotation 200ms linear;
+        &.rotate {
+          animation: rotation 200ms linear forwards;
+        }
+  
+        i {
+          color: $collapse-title-button-color;
+          transform: scale(1.5);
+        }
+      }
     }
-    button {
-      background-color: transparent;
-      border: none;
-      margin-right: 10px;
-      cursor: pointer;
-      animation: cancelRotation 200ms linear;
-      &.rotate {
-        animation: rotation 200ms linear forwards;
-      }
-
-      i {
-        color: $collapse-title-button-color;
-        transform: scale(1.5);
-      }
+  
+    p,
+    ul {
+      padding: 10px;
+      background-color: $collapse-items-background;
+      list-style: none;
+      animation: dropDownOpen 300ms linear;
     }
   }
-
-  p,
-  ul {
-    padding: 10px;
-    background-color: $collapse-items-background;
-    list-style: none;
-    animation: dropDownOpen 300ms linear;
-  }
-}
 
 //Gallery mixin
 @mixin gallery-styles($gap, $padding, $height, $background, $border-radius) {

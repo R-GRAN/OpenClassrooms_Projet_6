@@ -1,48 +1,8 @@
-.collapse{
-  overflow: hidden;
-  margin-bottom: 25px;
-
-  .title_collapse {
-    display: flex;
-    justify-content: space-between;
-    background-color: $primary;
-    position: relative;
-    z-index: 1;
-    padding: 8px;
-    border-radius: 5px;
-    h3 {
-      margin: 0;
-      color: $secondary;
-    }
-    button {
-      background-color: transparent;
-      border: none;
-      margin-right: 10px;
-      cursor: pointer;
-      animation: cancelRotation 200ms linear;
-      &.rotate {
-        animation: rotation 200ms linear forwards;
-      }
-
-      i {
-        color: $secondary;
-        transform: scale(1.5);
-      }
-    }
-  }
-
-  p,
-  ul {
-    padding: 10px;
-    background-color: #F6F6F673;
-    list-style: none;
-    animation: dropDownOpen 300ms linear;
-  }
-}
+.collapse {
+  @include collapse-styles;
 
   @media screen and (min-width: 426px) and (max-width: 780px) {
-    .collapse{
-        .title_collapse h3 {
+    .title_collapse h3 {
       font-size: 20px;
     }
     .title_collapse button i {
@@ -53,13 +13,10 @@
       padding: 7px;
       font-size: 16px;
     }
-    }
-  
   }
 
-  @media screen and (max-width: 780px) {
-    .collapse{
-          .title_collapse h3 {
+  @media screen and (max-width: 425px) {
+    .title_collapse h3 {
       font-size: 13px;
     }
     .title_collapse button i {
@@ -70,6 +27,5 @@
       padding: 5px;
       font-size: 11px;
     }
-    }
-
   }
+}
