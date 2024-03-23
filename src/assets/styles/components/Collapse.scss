@@ -4,7 +4,7 @@ $collapse-title-padding: 8px;
 $collapse-title-border-radius: 5px;
 $collapse-title-color: $secondary;
 $collapse-title-button-color: $secondary;
-$collapse-items-background: $third;
+$collapse-items-background: #F6F6F673;
 
 @mixin collapse-styles {
   overflow: hidden;
