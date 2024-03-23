@@ -1,21 +1,3 @@
-$gallery-gap-lg: 20px;
-$gallery-padding-lg: 20px;
-$gallery-height: 200px;
-$gallery-background: $third;
-$gallery-border-radius: 25px;
-$gallery-gap-sm: 15px;
-$gallery-padding-sm: 0;
-
-@mixin gallery-styles($gap, $padding, $height, $background, $border-radius) {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: $gap;
-  padding: $padding;
-  min-height: $height;
-  background-color: $background;
-  border-radius: $border-radius;
-}
-
 .gallery {
   @include gallery-styles($gallery-gap-lg, $gallery-padding-lg, $gallery-height, $gallery-background, $gallery-border-radius);
 

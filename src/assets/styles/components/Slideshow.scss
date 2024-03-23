@@ -1,82 +1,13 @@
-@mixin slideshow-styles($container-height, $ctrls-color, $ctrls-size) {
-  .picture_container {
-    position: relative;
-    height: $container-height;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 25px;
-    opacity: 0;
-    &.show {
-      opacity: 1;
-    }
-  }
-  .ctrls {
-    position: absolute;
-    color: $ctrls-color;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    button {
-      position: absolute;
-      background: transparent;
-      top: 0;
-      bottom: 0;
-      width: $ctrls-size;
-      border: none;
-      border-radius: 25px;
-      i {
-        color: $ctrls-color;
-        transform: scale(6);
-      }
-    }
-    .ctrl_prev {
-      left: 0;
-    }
-    .ctrl_next {
-      right: 0;
-    }
-    .current_count {
-      position: absolute;
-      top: 85%;
-      left: 50%;
-      font-size: 18px;
-    }
-  }
-}
-
 .slideshow {
-  @include slideshow-styles(500px, $secondary, 12%);
+  @include slideshow-styles($container-height-lg, $ctrls-scale-lg);
 
   @media screen and (min-width: 426px) and (max-width: 780px) {
-    .picture_container {
-      height: 375px;
-    }
-    .ctrls {
-      button {
-        i {
-          transform: scale(4);
-        }
-      }
-    }
+    @include slideshow-styles($container-height-md, $ctrls-scale-md);
   }
 
   @media screen and (max-width: 425px) {
-    .picture_container {
-      height: 255px;
-    }
+    @include slideshow-styles($container-height-sm, $ctrls-scale-sm);
     .ctrls {
-      button {
-        i {
-          transform: scale(2);
-        }
-      }
       .current_count {
         display: none;
       }

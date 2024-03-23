@@ -1,4 +1,116 @@
-$primary: #FF6060;
-$secondary:  #FFFFFF;
-$third:#E3E3E3;
+/* Main color variables */
+$primary: #ff6060;
+$secondary: #ffffff;
+$third: #e3e3e3;
 $fourth: #000000;
+
+/* Componants variables */
+
+// Banner variables
+$banner-height-lg: 223px;
+$banner-height-md: 162px;
+$banner-height-sm: 111px;
+$banner-margin-bottom-lg: 40px;
+$banner-margin-bottom-md: 30px;
+$banner-margin-bottom-sm: 20px;
+$banner-border-radius: 25px;
+
+// Card variables
+$card-height-lg: 340px;
+$card-height-sm: 225px;
+$border-radius: 10px;
+$gradient-color: #0000001f;
+$card-padding: 20px;
+
+// Collapse variables
+$collapse-margin-bottom: 25px;
+$collapse-background: $primary;
+$collapse-title-padding: 8px;
+$collapse-title-border-radius: 5px;
+$collapse-title-color: $secondary;
+$collapse-title-button-color: $secondary;
+$collapse-items-background: #f6f6f673;
+
+//Footer variables
+$footer-height: 209px;
+$footer-bg-color: $fourth;
+$footer-text-color: $secondary;
+$footer-padding: 25px;
+$footer-img-width: 122px;
+$footer-p-font-size: 12px;
+
+//Gallery variables
+$gallery-gap-lg: 20px;
+$gallery-padding-lg: 20px;
+$gallery-height: 200px;
+$gallery-background: $third;
+$gallery-border-radius: 25px;
+$gallery-gap-sm: 15px;
+$gallery-padding-sm: 0;
+
+// Header variables
+$header-margin-lg: 40px 40px 0;
+$header-margin-md: 30px 30px 0;
+$header-margin-sm: 20px 20px 0;
+$header-font-size-lg: 24px;
+$header-font-size-md: 18px;
+$header-font-size-sm: 12px;
+$header-img-width-lg: 210px;
+$header-img-width-md: 160px;
+$header-img-width-sm: 120px;
+
+//Layout variables
+$container-padding-lg: 40px;
+$container-padding-md: 30px;
+$container-padding-sm: 20px;
+
+//Rating variables
+$rating-width-lg: 200px;
+$rating-width-md: 150px;
+$rating-width-sm: 100px;
+$rating-font-size-lg: 24px;
+$rating-font-size-md: 19px;
+$rating-font-size-sm: 13px;
+$on-color: $primary;
+$off-color: $third;
+
+//Tags variables
+$tag-min-width-lg: 100px;
+$tag-max-width-lg: 150px;
+$tag-min-width-md: 80px;
+$tag-max-width-md: 125px;
+$tag-min-width-sm: 80px;
+$tag-max-width-sm: 100px;
+$tag-font-size-lg: 14px;
+$tag-font-size-md: 12px;
+$tag-font-size-sm: 10px;
+
+//Slideshow variables
+$container-height-lg: 500px;
+$container-height-md: 375px;
+$container-height-sm: 255px;
+$ctrls-scale-lg: 6;
+$ctrls-scale-md: 4;
+$ctrls-scale-sm: 2;
+
+/* Pages Variables */
+
+//Error variables
+$error-span-size-lg: 180px;
+$error-span-size-md: 96px;
+$error-span-size-sm: 60px;
+$error-p-margin-lg: 65px;
+$error-p-margin-md: 100px;
+$error-p-margin-sm: 100px;
+$error-p-font-size-lg: 25px;
+$error-p-font-size-md: 18px;
+$error-p-font-size-sm: 36px;
+$error-a-font-size: 14px;
+$error-a-margin: 100px;
+
+//Logement variables
+$host-img-size-lg: 64px; 
+$host-img-size-md: 48px; 
+$host-img-size-sm: 32px; 
+$text-size-lg: 18px; 
+$text-size-md: 14px; 

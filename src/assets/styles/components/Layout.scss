@@ -1,12 +1,3 @@
-$container-padding-lg: 40px;
-$container-padding-md: 30px;
-$container-padding-sm: 20px;
-
-
-@mixin container-styles($padding) {
-  padding: $padding;
-}
-
 .layout {
   .container {
     @include container-styles($container-padding-lg);
