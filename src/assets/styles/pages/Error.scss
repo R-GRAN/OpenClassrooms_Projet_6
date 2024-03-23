@@ -1,4 +1,16 @@
-.error {
+$error-span-size-lg: 180px;
+$error-span-size-md: 96px;
+$error-span-size-sm: 60px;
+$error-p-margin-lg: 65px;
+$error-p-margin-md: 100px;
+$error-p-margin-sm: 100px;
+$error-p-font-size-lg: 25px;
+$error-p-font-size-md: 18px;
+$error-p-font-size-sm: 36px;
+$error-a-font-size: 14px;
+$error-a-margin: 100px;
+
+@mixin error-section-styles($span-size, $p-margin, $p-font-size, $a-font-size, $a-margin) {
   color: $primary;
   text-align: center;
 
@@ -7,51 +19,30 @@
     margin-top: 60px;
     font: {
       weight: 700;
-      size: 288px;
+      size: $span-size;
     }
   }
   p {
-    margin-block: 100px;
-    font-size: 36px;
+    margin-block: $p-margin;
+    font-size: $p-font-size;
   }
   a {
     display: block;
     color: $fourth;
-    margin-bottom: 100px;
+    margin-bottom: $a-margin;
+    font-size: $a-font-size;
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 780px) {
-  .error {
-    span {
-      font: {
-        size: 180px;
-      }
-    }
-    p {
-      margin-block: 65px;
-      font-size: 25px;
-    }
-    a {
-      margin-bottom: 100px;
-    }
+.error {
+  @include error-section-styles($error-span-size-lg, $error-p-margin-lg, $error-p-font-size-lg, $error-a-font-size, $error-a-margin);
+
+  @media screen and (min-width: 426px) and (max-width: 780px) {
+    @include error-section-styles($error-span-size-md, $error-p-margin-md, $error-p-font-size-md, $error-a-font-size, $error-a-margin);
+  }
+
+  @media screen and (max-width: 425px) {
+    @include error-section-styles($error-span-size-sm, $error-p-margin-sm, $error-p-font-size-sm, $error-a-font-size, $error-a-margin);
   }
 }
 
-@media screen and (max-width: 425px) {
-  .error {
-    span {
-      font: {
-        size: 96px;
-      }
-    }
-    p {
-      margin-block: 100px;
-      font-size: 18px;
-    }
-    a {
-      font-size: 14px;
-      margin-bottom: 100px;
-    }
-  }
-}

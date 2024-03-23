@@ -1,11 +1,10 @@
-.slideshow {
+@mixin slideshow-styles($container-height, $ctrls-color, $ctrls-size) {
   .picture_container {
     position: relative;
-    height: 500px;
+    height: $container-height;
     width: 100%;
     margin-bottom: 20px;
   }
-
   img {
     position: absolute;
     width: 100%;
@@ -17,10 +16,9 @@
       opacity: 1;
     }
   }
-
   .ctrls {
     position: absolute;
-    color: $secondary;
+    color: $ctrls-color;
     top: 0;
     bottom: 0;
     left: 0;
@@ -30,10 +28,10 @@
       background: transparent;
       top: 0;
       bottom: 0;
-      width: 12%;
+      width: $ctrls-size;
       border: none;
       i {
-        color: $secondary;
+        color: $ctrls-color;
         transform: scale(6);
       }
     }
@@ -50,6 +48,11 @@
       font-size: 18px;
     }
   }
+}
+
+.slideshow {
+  @include slideshow-styles(500px, $secondary, 12%);
+
   @media screen and (min-width: 426px) and (max-width: 780px) {
     .picture_container {
       height: 375px;
@@ -62,6 +65,7 @@
       }
     }
   }
+
   @media screen and (max-width: 425px) {
     .picture_container {
       height: 255px;

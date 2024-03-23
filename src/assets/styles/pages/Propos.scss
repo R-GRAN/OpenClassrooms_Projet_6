@@ -1,10 +1,12 @@
-.aboutList_container {
-  width: 90%;
+@mixin about-list-container-styles($width) {
+  width: $width;
   margin: auto;
 }
 
-@media screen and (max-width: 425px) {
-  .aboutList_container {
-    width: 100%;
+.aboutList_container {
+  @include about-list-container-styles(90%);
+
+  @media screen and (max-width: 425px) {
+    @include about-list-container-styles(100%);
   }
 }

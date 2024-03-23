@@ -1,37 +1,40 @@
-.tags {
+$tag-min-width-lg: 100px;
+$tag-max-width-lg: 150px;
+$tag-min-width-md: 80px;
+$tag-max-width-md: 125px;
+$tag-min-width-sm: 80px;
+$tag-max-width-sm: 100px;
+$tag-font-size-lg: 14px;
+$tag-font-size-md: 12px;
+$tag-font-size-sm: 10px;
+
+@mixin tag-styles($min-width, $max-width, $font-size) {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
+  grid-template-columns: repeat(auto-fit, minmax(#{$min-width}, #{$max-width}));
   gap: 10px;
   margin: 25px 0;
+
   .tag {
     border-radius: 10px;
     padding: 2px;
-    font-size: 14px;
+    font-size: $font-size;
     color: $secondary;
     background-color: $primary;
     text-align: center;
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 780px) {
-  .tags {
-    grid-template-columns: repeat(auto-fit, minmax(80px, 125px));
-    gap: 10px;
-    width: 100%;
+.tags {
+  @include tag-styles($tag-min-width-lg, $tag-max-width-lg, $tag-font-size-lg);
+
+  @media screen and (min-width: 426px) and (max-width: 780px) {
+    @include tag-styles($tag-min-width-md, $tag-max-width-md, $tag-font-size-md);
     margin: 10px 0;
-    .tag {
-      font-size: 12px;
-    }
+  }
+
+  @media screen and (max-width: 425px) {
+    @include tag-styles($tag-min-width-sm, $tag-max-width-sm, $tag-font-size-sm);
+    margin: 10px 0;
   }
 }
 
-@media screen and (max-width: 425px) {
-  .tags {
-    grid-template-columns: repeat(auto-fit, minmax(80px, 100px));
-    gap: 10px;
-    margin: 10px 0;
-    .tag {
-      font-size: 10px;
-    }
-  }
-}

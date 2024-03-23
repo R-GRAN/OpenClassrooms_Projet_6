@@ -14,12 +14,6 @@ $gallery-padding-sm: 0;
   min-height: $height;
   background-color: $background;
   border-radius: $border-radius;
-
-  @media screen and (max-width: 425px) {
-    padding: $gallery-padding-sm;
-    background: transparent;
-    gap: $gallery-gap-sm;
-  }
 }
 
 .gallery {
@@ -27,5 +21,12 @@ $gallery-padding-sm: 0;
 
   @media screen and (min-width: 426px) and (max-width: 780px) {
     grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: 425px) {
+    grid-template-columns: 1fr;
+    padding: $gallery-padding-sm;
+    background: transparent;
+    gap: $gallery-gap-sm;
   }
 }

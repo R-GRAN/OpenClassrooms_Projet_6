@@ -3,8 +3,8 @@ $collapse-background: $primary;
 $collapse-title-padding: 8px;
 $collapse-title-border-radius: 5px;
 $collapse-title-color: $secondary;
-$collapse-title-button-color: $third;
-
+$collapse-title-button-color: $secondary;
+$collapse-items-background: $third;
 
 @mixin collapse-styles {
   overflow: hidden;
@@ -24,7 +24,6 @@ $collapse-title-button-color: $third;
     }
     button {
       background-color: transparent;
-      color: $collapse-title-button-color;
       border: none;
       margin-right: 10px;
       cursor: pointer;
@@ -34,14 +33,16 @@ $collapse-title-button-color: $third;
       }
 
       i {
+        color: $collapse-title-button-color;
         transform: scale(1.5);
       }
     }
   }
 
-  p, ul {
+  p,
+  ul {
     padding: 10px;
-    background-color: $collapse-title-button-color;
+    background-color: $collapse-items-background;
     list-style: none;
     animation: dropDownOpen 300ms linear;
   }
@@ -57,7 +58,8 @@ $collapse-title-button-color: $third;
     .title_collapse button i {
       transform: scale(1.25);
     }
-    p, ul {
+    p,
+    ul {
       padding: 7px;
       font-size: 16px;
     }
@@ -70,7 +72,8 @@ $collapse-title-button-color: $third;
     .title_collapse button i {
       transform: scale(1);
     }
-    p, ul {
+    p,
+    ul {
       padding: 5px;
       font-size: 11px;
     }
